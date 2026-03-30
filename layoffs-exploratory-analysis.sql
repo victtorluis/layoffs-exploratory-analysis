@@ -128,3 +128,31 @@ ORDER BY dates ASC
 SELECT dates, total_laid_off, SUM(total_laid_off) OVER (ORDER BY dates ASC) as rolling_total_layoffs
 FROM DATE_CTE
 ORDER BY dates ASC;
+
+-- Abaixo irei explicar sobre os estágios das empresas
+-- 1. Seed (Semente)
+--É a fase inicial. A empresa tem apenas uma ideia ou um protótipo e recebeu um investimento pequeno para começar a operar.
+
+--Nas demissões: Se uma empresa Seed aparece no seu dataset com 100% de demissões, significa que ela provavelmente nem chegou a lançar o produto e faliu cedo.
+
+-- 2. Series A, B, C, D... (Séries de Investimento)
+-- À medida que a empresa cresce, ela faz novas rodadas de captação de dinheiro. Cada letra representa um degrau de maturidade.
+
+-- Series A e B: Empresas que já provaram que o produto funciona e estão tentando escalar (contratando muita gente).
+
+-- Series C em diante: Empresas grandes, muitas vezes já valendo bilhões (Unicórnios), que estão se preparando para dominar o mercado mundial.
+
+-- No insight de dados: Demissões massivas aqui geralmente indicam que a empresa "contratou demais" esperando um crescimento que não veio.
+
+-- 3. Post-IPO (Pós-IPO)
+-- "IPO" significa Initial Public Offering. É quando a empresa entra na Bolsa de Valores e qualquer pessoa pode comprar ações dela (Ex: Google, Amazon, Uber).
+
+-- Nas demissões: Empresas Post-IPO são as que costumam ter os maiores números absolutos de demissões (milhares de pessoas), pois são corporações gigantescas e precisam responder aos acionistas para manter o lucro.
+
+-- 4. Acquired (Adquirida)
+-- A empresa foi comprada por outra maior.
+
+-- Nas demissões: Muitas vezes, quando uma empresa é comprada, ocorrem demissões por "duplicidade" (por exemplo, não precisa de dois departamentos de RH se as empresas agora são uma só).
+
+-- 5. Private (Privada)
+-- Empresas que já são grandes e estabelecidas, mas que decidiram não abrir capital na bolsa ou ainda pertencem aos fundadores/investidores privados.
